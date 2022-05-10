@@ -14,11 +14,9 @@
 
             <h1 class="my-4">MyShop</h1>
             <div class="list-group">
-                <a href="#" class="list-group-item">New</a>
-                <a href="#" class="list-group-item">Clothes</a>
-                <a href="#" class="list-group-item">Shoes</a>
-                <a href="#" class="list-group-item">Accessories</a>
-                <a href="#" class="list-group-item">Gifts</a>
+                {% for category in categories %}
+                <a href="#" class="list-group-item">{{ category.name }}</a>
+                {% endfor %}
             </div>
 
         </div>
