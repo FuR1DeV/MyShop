@@ -6,7 +6,7 @@ from products.models import Product, ProductCategory
 
 
 def index(request):
-    context = {'title': 'MyShop'}
+    context = {'title': 'MySite'}
     return render(request, 'products/index.html', context)
 
 
