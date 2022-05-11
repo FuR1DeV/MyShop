@@ -27,8 +27,14 @@ def register(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('users:login'))
+        if form.errors:
+            print(form.errors)
     else:
         form = UserRegisterForm()
     context = {'title': 'MyShop - Registration', 'form': form}
-    print(context)
     return render(request, 'authapp/register.html', context)
+
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect(reverse('index'))
