@@ -6,9 +6,9 @@ from authapp.models import User
 
 class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите имя пользователя'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter username'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите пароль'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter password'}))
 
     class Meta:
         model = User
@@ -17,17 +17,17 @@ class UserLoginForm(AuthenticationForm):
 
 class UserRegisterForm(UserCreationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите никнейм'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter username'}))
     email = forms.CharField(widget=forms.EmailInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите адрес email'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter your email'}))
     first_name = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите имя пользователя'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter first name'}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите фамилию пользователя'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter last name'}))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите пароль'}))
+        'class': 'form-control py-4', 'placeholder': 'Enter password'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Подтвердите пароль'}))
+        'class': 'form-control py-4', 'placeholder': 'Confirm the password'}))
 
     class Meta:
         model = User

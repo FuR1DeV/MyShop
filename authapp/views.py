@@ -28,7 +28,7 @@ def register(request):
             form.save()
             return HttpResponseRedirect(reverse('users:login'))
         if form.errors:
-            print(form.errors)
+            pass
     else:
         form = UserRegisterForm()
     context = {'title': 'MyShop - Registration', 'form': form}
